@@ -1,12 +1,11 @@
-// eslint-disable-next-line simple-import-sort/imports
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
+import { getMessages, getTimeZone, setRequestLocale } from 'next-intl/server';
 
 import { ProvidersLayout } from '@/providers';
-import { cn, isAppLocale, routing } from '@/shared';
+import { routing } from '@/shared';
 
-const inter = Inter({ subsets: ['latin'] });
+import { getValidLocale } from './_lib/get-valid-locale';
+import { createMetadata } from './_lib/metadata';
+import { AppShell } from './_ui/app-shell';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -15,39 +14,29 @@ export function generateStaticParams() {
 export async function generateMetadata(
   props: Omit<LayoutProps<'/[locale]'>, 'children'>,
 ) {
-  const { locale } = await props.params;
+  const { locale: rawLocale } = await props.params;
 
-  if (!isAppLocale(locale)) {
-    notFound();
-  }
+  const locale = getValidLocale(rawLocale);
 
-  const t = await getTranslations({
-    locale,
-    namespace: 'LocaleLayout',
-  });
-
-  return {
-    title: t('title'),
-  };
+  return createMetadata(locale);
 }
 
 export default async function LocaleLayout({
   children,
   params,
 }: LayoutProps<'/[locale]'>) {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
 
-  if (!isAppLocale(locale)) {
-    notFound();
-  }
+  const locale = getValidLocale(rawLocale);
 
   setRequestLocale(locale);
 
+  const messages = await getMessages();
+  const timeZone = await getTimeZone();
+
   return (
-    <html className='h-full' lang={locale}>
-      <body className={cn(inter.className, 'flex h-full flex-col')}>
-        <ProvidersLayout>{children}</ProvidersLayout>
-      </body>
-    </html>
+    <ProvidersLayout locale={locale} messages={messages} timeZone={timeZone}>
+      <AppShell>{children}</AppShell>
+    </ProvidersLayout>
   );
 }

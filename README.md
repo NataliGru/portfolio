@@ -127,7 +127,7 @@ The template includes `next-intl` and is already configured for multiple
 languages:
 
 - `en` - English, used as the default locale.
-- `ua` - Ukrainian.
+- `uk` - Ukrainian.
 
 Localized routes live under:
 
@@ -140,7 +140,7 @@ Translation files live under:
 ```text
 src/localization/
   en/
-  ua/
+  uk/
 ```
 
 The i18n configuration is located in:

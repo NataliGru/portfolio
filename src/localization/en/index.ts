@@ -1,9 +1,9 @@
 import home from './home.json';
-import LocaleLayout from './locale-layout.json';
 import locale from './locale.json';
+import mainLayout from './main-layout.json';
 
 const messages = {
-  LocaleLayout,
+  mainLayout,
   home,
   locale,
 };

@@ -7,7 +7,7 @@ export const Paths = {
   about: 'about',
   projects: {
     index: 'projects',
-    id: ':projectId',
+    slug: ':slug',
   },
 
   skills: 'skills',

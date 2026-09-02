@@ -10,7 +10,7 @@ export const AppShell = ({ children }: AppShellProps) => {
   return (
     <div className='bg-background text-foreground flex min-h-dvh flex-col'>
       <Header />
-      <div className='relative z-0 flex-1 pt-16'>{children}</div>
+      <main className='relative z-0 flex-1 pt-20'>{children}</main>
       {/* <Footer /> */}
 
       {/* <ScrollToTop />

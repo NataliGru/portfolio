@@ -1,9 +1,12 @@
-import { LocaleSwitcher } from '@/features';
+import { Hero } from '@/widgets/hero';
+import { Projects } from '@/widgets/projects';
 
-export default function HomeLocalized() {
+export default function Home() {
   return (
-    <div className='flex flex-row w-full justify-between gap-4 p-4 items-center'>
-      Home Page
+    <div className='flex flex-col items-center'>
+      <Hero />
+
+      <Projects />
     </div>
   );
 }

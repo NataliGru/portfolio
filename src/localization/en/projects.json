@@ -1,0 +1,23 @@
+{
+  "title": "Projects",
+  "description": "Projects I build to explore ideas, solve frontend challenges and try new things.",
+  "items": {
+    "mntn": {
+      "title": "MNTN",
+      "description": "A responsive hiking-themed landing page built around scroll-driven storytelling, layered parallax and smooth motion. The project explores how animation and layout can work together without getting in the way of the content."
+    }
+  },
+  "category": {
+    "landing": "Landing page",
+    "frontend": "Frontend"
+  },
+  "technologies": {
+    "next": "Next.js",
+    "typescript": "TypeScript",
+    "tailwind": "Tailwind CSS",
+    "motion": "Motion"
+  },
+  "visitSite": "Visit site",
+  "readMore": "Read more",
+  "iframeLabel": "project preview"
+}

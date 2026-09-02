@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { AppLocale } from '@/shared';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+const SITE_URL = process.env.SITE_URL ?? 'http://localhost:3000';
 
 const OPEN_GRAPH_LOCALES: Record<AppLocale, string> = {
   en: 'en_US',

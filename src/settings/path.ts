@@ -9,6 +9,11 @@ export const Paths = {
     index: 'projects',
     id: ':projectId',
   },
+
+  skills: 'skills',
+  experience: 'experience',
+
+  contact: 'contact',
 } as const;
 
 export const generatePathWithRouteParams = (

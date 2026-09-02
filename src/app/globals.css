@@ -1,26 +1,59 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Primitives */
+  --grey-100: #ffffff;
+  --grey-200: #f5f0f0;
+  --grey-250: #ebe0e0;
+  --grey-300: #cfc9c9;
+  --grey-500: #8e8787;
+  --grey-700: #3d363d;
+  --grey-800: #1b1818;
+  --grey-900: #000000;
+
+/* Semantic */
+  --background: var(--grey-100);
+  --foreground: var(--grey-800);
+
+  --section-background: var(--grey-200);
+  --card-background: var(--grey-250);
+  --control-background: var(--grey-700);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-section-background: var(--section-background);
+  --color-card-background: var(--card-background);
+  --color-control-background: var(--control-background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='light'] {
+  --background: var(--grey-100);
+  --foreground: var(--grey-800);
+  --section-background: var(--grey-200);
+  --card-background: var(--grey-250);
+  --control-background: var(--grey-500);
+}
+
+[data-theme='dark'] {
+  --background: var(--grey-900);
+  --foreground: var(--grey-100);
+  --section-background: var(--grey-800);
+  --card-background: var(--grey-700);
+  --control-background: var(--grey-500);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@utility transition-all-300 {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }

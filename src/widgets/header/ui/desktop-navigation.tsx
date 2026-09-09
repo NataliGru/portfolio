@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import clsx from 'clsx';
 
-import { LocaleSwitcher } from '@/features';
+import { DownloadCV, LocaleSwitcher } from '@/features';
 import { ThemeToggle } from '@/features/theme-toggle';
 
 import { NAVIGATION_LINKS } from '../model/constants';
@@ -16,7 +16,6 @@ export const DesktopNavigation = async () => {
     <nav
       className={clsx(
         'hidden flex-row items-center justify-between gap-5 px-5 py-2 md:flex lg:gap-20 lg:px-10',
-        // 'from-background/30 to-background/0 bg-linear-to-b backdrop-blur-md backdrop-brightness-90',
         'bg-section-background',
       )}
     >
@@ -34,6 +33,8 @@ export const DesktopNavigation = async () => {
       </ul>
 
       <div className='flex flex-row items-center gap-5'>
+        <DownloadCV />
+
         <LocaleSwitcher />
 
         <ThemeToggle />

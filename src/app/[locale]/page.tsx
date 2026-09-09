@@ -1,5 +1,4 @@
-import { Hero } from '@/widgets/hero';
-import { Projects } from '@/widgets/projects';
+import { Hero, Projects } from '@/widgets';
 
 export default function Home() {
   return (

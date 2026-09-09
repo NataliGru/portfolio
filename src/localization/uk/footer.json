@@ -1,0 +1,17 @@
+{
+  "cta": {
+    "text": "Відкрита до нових можливостей",
+    "button": "Зв’язатися"
+  },
+  "about": {
+    "title": "Про мене",
+    "description": "Frontend Developer із понад 2 роками комерційного досвіду розробки вебзастосунків на React та Next.js.",
+    "link": "Більше про мене"
+  },
+  "contacts": {
+    "title": "Контакти",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}

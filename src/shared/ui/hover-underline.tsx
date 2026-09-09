@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
+import { cn } from '../lib';
+
 interface HoverUnderlineProps {
   children: ReactNode;
   className?: string;
@@ -14,12 +16,12 @@ export const HoverUnderline = ({
   lineClassName,
 }: HoverUnderlineProps) => {
   return (
-    <span className={clsx('group block w-fit', className)}>
+    <span className={cn('group block w-fit', className)}>
       {children}
 
       <span
-        className={clsx(
-          'bg-accent transition-all-300 block h-px w-0',
+        className={cn(
+          'block h-px w-0 bg-foreground transition-all-300',
           'group-hover:w-full',
           '2xl:h-1',
           lineClassName,

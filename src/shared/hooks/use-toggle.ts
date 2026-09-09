@@ -1,21 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export const useToggle = (initialValue = false) => {
   const [isOpen, setIsOpen] = useState(initialValue);
 
-  const toggle = () => {
+  const toggle = useCallback(() => {
     setIsOpen((prev) => !prev);
-  };
+  }, []);
 
-  const open = () => {
+  const open = useCallback(() => {
     setIsOpen(true);
-  };
+  }, []);
 
-  const close = () => {
+  const close = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   return {
     isOpen,

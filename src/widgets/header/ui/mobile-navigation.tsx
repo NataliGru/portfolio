@@ -1,12 +1,14 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import { useTranslations } from 'next-intl';
 
 import clsx from 'clsx';
 import { MenuIcon, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
-import { LocaleSwitcher } from '@/features';
+import { DownloadCV, LocaleSwitcher } from '@/features';
 import { ThemeToggle } from '@/features/theme-toggle';
 import { ToggleIconButton } from '@/shared';
 import { useToggle } from '@/shared/hooks/use-toggle';
@@ -31,7 +33,7 @@ export const MobileNavigation = () => {
     toggle: onToggle,
   } = useToggle();
 
-  useMobileScrollLock({ isOpenMenu });
+  useMobileScrollLock({ isOpenMenu, closeMenu });
 
   return (
     <nav className='relative z-50 md:hidden'>
@@ -89,8 +91,13 @@ export const MobileNavigation = () => {
               ))}
             </motion.ul>
 
-            <motion.div {...MENU_FOOTER_MOTION} className='mb-5 px-10 text-xl'>
+            <motion.div
+              {...MENU_FOOTER_MOTION}
+              className='mb-5 px-10 text-xl flex flex-col gap-10'
+            >
               <LocaleSwitcher />
+
+              <DownloadCV />
             </motion.div>
           </motion.div>
         )}

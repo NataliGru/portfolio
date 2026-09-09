@@ -1,0 +1,17 @@
+{
+  "cta": {
+    "text": "Open to new opportunities",
+    "button": "Let's talk"
+  },
+  "about": {
+    "title": "About me",
+    "description": "Frontend Developer with 2+ years of commercial experience building web applications with React and Next.js.",
+    "link": "More about me"
+  },
+  "contacts": {
+    "title": "Get in touch",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}

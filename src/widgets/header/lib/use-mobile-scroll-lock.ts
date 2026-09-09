@@ -1,14 +1,18 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { useLenis } from 'lenis/react';
 
 interface UseMobileScrollLock {
   isOpenMenu: boolean;
+  closeMenu: () => void;
 }
 
-export const useMobileScrollLock = ({ isOpenMenu }: UseMobileScrollLock) => {
+export const useMobileScrollLock = ({
+  isOpenMenu,
+  closeMenu,
+}: UseMobileScrollLock) => {
   const lenis = useLenis();
 
   useEffect(() => {
@@ -24,4 +28,18 @@ export const useMobileScrollLock = ({ isOpenMenu }: UseMobileScrollLock) => {
       lenis.start();
     };
   }, [isOpenMenu, lenis]);
+
+  useEffect(() => {
+    const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+    const closeMenuOnDesktop = () => {
+      if (desktopMediaQuery.matches) closeMenu();
+    };
+
+    closeMenuOnDesktop();
+    desktopMediaQuery.addEventListener('change', closeMenuOnDesktop);
+
+    return () => {
+      desktopMediaQuery.removeEventListener('change', closeMenuOnDesktop);
+    };
+  }, [closeMenu]);
 };

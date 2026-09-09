@@ -55,7 +55,7 @@ export const ProjectPreview = ({ projectURL }: ProjectPreviewProps) => {
             <Button
               key={mode}
               type='button'
-              variant='preview'
+              variant='control'
               aria-label={t(config.translationKey)}
               aria-pressed={currentMode === mode}
               onClick={() => setCurrentMode(mode as PreviewMode)}

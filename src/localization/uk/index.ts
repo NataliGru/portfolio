@@ -1,3 +1,5 @@
+import footer from './footer.json';
+import general from './general.json';
 import header from './header.json';
 import hero from './hero.json';
 import home from './home.json';
@@ -12,6 +14,8 @@ const messages = {
   header,
   hero,
   projects,
+  footer,
+  general,
 };
 
 export default messages;

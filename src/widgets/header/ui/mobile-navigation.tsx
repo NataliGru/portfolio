@@ -40,6 +40,7 @@ export const MobileNavigation = () => {
           'relative z-50 flex h-20 items-center justify-between px-5',
           'bg-section-background border-foreground/0 border-b transition-all-300',
           'backdrop-blur-md backdrop-brightness-90',
+          'gap-10',
           isOpenMenu && 'border-foreground/30',
         )}
       >
@@ -66,7 +67,7 @@ export const MobileNavigation = () => {
             {...MENU_MOTION}
             className={clsx(
               'fixed inset-0 z-40 h-dvh w-dvw pb-10',
-              'backdrop-blur-md ',
+              'backdrop-blur-xl ',
               'flex flex-col',
             )}
           >

@@ -12,6 +12,7 @@
     "frontend": "Frontend"
   },
   "technologies": {
+    "technologies": "Technologies",
     "next": "Next.js",
     "typescript": "TypeScript",
     "tailwind": "Tailwind CSS",
@@ -19,5 +20,9 @@
   },
   "visitSite": "Visit site",
   "readMore": "Read more",
-  "iframeLabel": "project preview"
+  "iframeLabel": "Project preview",
+  "preview": {
+    "desktop": "Desktop preview",
+    "mobile": "Mobile preview"
+  }
 }

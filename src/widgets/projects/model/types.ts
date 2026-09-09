@@ -1,0 +1,1 @@
+type PreviewMode = 'desktop' | 'mobile';

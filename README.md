@@ -11,6 +11,9 @@ professional experience.
 - English and Ukrainian localization
 - Light and dark themes
 - Smooth UI animations
+- Responsive project cards with localized metadata and technology tags
+- Interactive project previews with desktop and mobile viewport modes
+- Direct links to project details and live external websites
 - Pages for projects, skills, experience, and contact information
 
 ## Tech Stack

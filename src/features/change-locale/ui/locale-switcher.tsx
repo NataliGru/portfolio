@@ -1,60 +1,33 @@
 'use client';
 
-import { Fragment, useTransition } from 'react';
-
-import { Locale, useLocale, useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
-
-import clsx from 'clsx';
+import { Fragment } from 'react';
 
 import { routing } from '@/shared';
-import { usePathname, useRouter } from '@/shared';
+import { Button } from '@/shared/ui/button';
+
+import { useLocaleSwitcher } from '../model/use-locale-switcher';
 
 export const LocaleSwitcher = () => {
-  const router = useRouter();
-
-  const [isPending, startTransition] = useTransition();
-
-  const pathname = usePathname();
-  const params = useParams();
-
-  const t = useTranslations();
-  const currentLocale = useLocale(); //default value
-
-  const onChangeLocale = (newLocale: Locale) => {
-    if (newLocale === currentLocale) return;
-
-    startTransition(() => {
-      router.replace(
-        // @ts-expect-error -- TypeScript will validate that only known `params`
-        // are used in combination with a given `pathname`. Since the two will
-        // always match for the current route, we can skip runtime checks.
-        { pathname, params },
-        { locale: newLocale },
-      );
-    });
-  };
+  const { currentLocale, isPending, t, onChangeLocale } = useLocaleSwitcher();
 
   return (
-    <div className={clsx('flex items-center gap-2')}>
+    <div className='flex items-center gap-2'>
       {routing.locales.map((localeItem) => {
         const isLastElement = localeItem === routing.locales.at(-1);
+        const isActive = localeItem === currentLocale;
 
         return (
           <Fragment key={localeItem}>
-            <button
+            <Button
+              variant='ghost'
+              aria-pressed={isActive}
               aria-label={`${t(`locale.label`)} ${t(`locale.${localeItem}`)}`}
-              className={clsx(
-                'cursor-pointer p-2',
-                localeItem === currentLocale
-                  ? 'text-accent'
-                  : 'text-foreground/50 hover:text-foreground transition-all-300',
-              )}
               onClick={() => onChangeLocale(localeItem)}
-              disabled={localeItem === currentLocale || isPending}
+              disabled={isActive || isPending}
             >
               {t(`locale.${localeItem}Short`)}
-            </button>
+            </Button>
+
             {!isLastElement && <span>|</span>}
           </Fragment>
         );

@@ -12,13 +12,17 @@
     "frontend": "Frontend"
   },
   "technologies": {
+    "technologies": "Технології",
     "next": "Next.js",
     "typescript": "TypeScript",
     "tailwind": "Tailwind CSS",
     "motion": "Motion"
   },
   "visitSite": "Відвідати сайт",
-  "viewProject": "Дізнатисся більше",
-  "iframeLabel": "попередній перегляд проекту"
-
+  "readMore": "Дізнатися більше",
+  "iframeLabel": "Попередній перегляд проєкту",
+  "preview": {
+    "desktop": "Перегляд для комп’ютера",
+    "mobile": "Перегляд для телефона"
+  }
 }

@@ -2,6 +2,7 @@ import { cn } from '@/shared';
 
 import { FooterAbout } from './footer-about';
 import { FooterContacts } from './footer-contacts';
+import { FooterCopyright } from './footer-copyright';
 
 export const Footer = () => {
   return (
@@ -18,11 +19,7 @@ export const Footer = () => {
         <FooterContacts />
       </div>
 
-      <p className='self-center text-control-background flex flex-row gap-12'>
-        <span>Nataliia Hrushanyk</span>
-
-        <span>© {new Date().getFullYear()}</span>
-      </p>
+      <FooterCopyright />
     </footer>
   );
 };

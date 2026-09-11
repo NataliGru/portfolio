@@ -24,7 +24,7 @@ export const DownloadCV = ({ className }: DownloadCVProp) => {
       )}
     >
       {t('downloadCV')}
-      <Download className='size-5' />
+      <Download className='size-5 animate-bounce' />
     </Link>
   );
 };

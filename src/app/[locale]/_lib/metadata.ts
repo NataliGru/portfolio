@@ -24,6 +24,10 @@ export const createMetadata = async (locale: AppLocale) => {
   return {
     metadataBase: new URL(SITE_URL),
 
+    verification: {
+      google: 'kyGwbw5M5qZIcY6LNFRA3jnUal72ag7Q7sOFmQbnhXQ',
+    },
+
     title: {
       default: title,
       template: t('titleTemplate'),

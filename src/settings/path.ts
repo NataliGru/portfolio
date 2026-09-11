@@ -10,7 +10,6 @@ export const Paths = {
     slug: ':slug',
   },
 
-  skills: 'skills',
   experience: 'experience',
 
   contact: 'contact',

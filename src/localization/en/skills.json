@@ -1,0 +1,11 @@
+{
+  "title": "Skills",
+  "description": "Technologies and tools I've worked with across commercial and personal projects.",
+  "groups": {
+    "frontend": "Frontend",
+    "uiAndStyling": "UI & styling",
+    "stateAndData": "State & data",
+    "formsAndIntegrations": "Forms & integrations",
+    "toolsAndPractices": "Tools & practices"
+  }
+}

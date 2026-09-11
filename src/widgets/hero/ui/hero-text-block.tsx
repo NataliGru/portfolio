@@ -8,6 +8,7 @@ export const HeroTextBlock = async () => {
       <h2 className='uppercase text-2xl md:text-4xl text-secondary-text font-bold'>
         {t('eyebrow')}
       </h2>
+
       <h1 className='uppercase text-foreground text-4xl md:text-6xl font-bold leading-relaxed'>
         {t('title.start')}{' '}
         <span className='bg-background dark:bg-card-background rounded-4xl px-3 py-2'>

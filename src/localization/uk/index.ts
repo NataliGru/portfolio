@@ -6,6 +6,7 @@ import home from './home.json';
 import locale from './locale.json';
 import mainLayout from './main-layout.json';
 import projects from './projects.json';
+import skills from './skills.json';
 
 const messages = {
   mainLayout,
@@ -16,6 +17,7 @@ const messages = {
   projects,
   footer,
   general,
+  skills,
 };
 
 export default messages;

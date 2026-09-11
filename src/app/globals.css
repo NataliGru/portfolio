@@ -19,7 +19,9 @@
   --section-background: var(--grey-200);
   --card-background: var(--grey-250);
   --control-background: var(--grey-700);
+  --accent:var(--grey-700);
   --secondary-text: var(--grey-300);
+  
 }
 
 @theme inline {
@@ -37,6 +39,7 @@
   --section-background: var(--grey-200);
   --card-background: var(--grey-250);
   --control-background: var(--grey-500);
+  --accent: var(--grey-700);
   --secondary-text: var(--grey-300);
 }
 
@@ -47,6 +50,7 @@
   --card-background: var(--grey-700);
   --control-background: var(--grey-500);
   --secondary-text: var(--grey-500);
+  --accent: var(--grey-300);
 }
 
 body {
@@ -56,6 +60,8 @@ body {
 
 @theme {
   --breakpoint-xs: 340px;
+  --breakpoint-3xl: 137.5rem;
+    /* 2200px */
 }
 
 @utility transition-all-300 {

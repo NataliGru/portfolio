@@ -1,4 +1,4 @@
-import { Hero, Projects } from '@/widgets';
+import { Hero, Projects, Skills } from '@/widgets';
 
 export default function Home() {
   return (
@@ -6,6 +6,8 @@ export default function Home() {
       <Hero />
 
       <Projects />
+
+      <Skills />
     </div>
   );
 }

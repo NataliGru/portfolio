@@ -5,13 +5,14 @@ import Link from 'next/link';
 
 import { Download } from 'lucide-react';
 
-import { cn } from '@/shared';
+import { cn, trackEvent } from '@/shared';
 
 interface DownloadCVProp {
   className?: string;
+  place: 'header' | 'footer' | 'mobile_header';
 }
 
-export const DownloadCV = ({ className }: DownloadCVProp) => {
+export const DownloadCV = ({ className, place }: DownloadCVProp) => {
   const t = useTranslations('general');
 
   return (
@@ -22,6 +23,7 @@ export const DownloadCV = ({ className }: DownloadCVProp) => {
         'text-nowrap flex items-center justify-center gap-2 rounded-2xl bg-foreground/50 p-3 text-background transition-all-300 hover:bg-foreground',
         className,
       )}
+      onClick={() => trackEvent(`cv_download_${place}`)}
     >
       {t('downloadCV')}
       <Download className='size-5 animate-bounce' />

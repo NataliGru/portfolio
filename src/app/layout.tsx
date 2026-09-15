@@ -4,6 +4,8 @@ import { getLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import { Montserrat_Alternates, Roboto_Serif } from 'next/font/google';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import { cn } from '@/shared';
 
 import './globals.css';
@@ -44,6 +46,8 @@ export default async function RootLayout({ children }: Props) {
         >
           {children}
         </ThemeProvider>
+
+        {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
       </body>
     </html>
   );

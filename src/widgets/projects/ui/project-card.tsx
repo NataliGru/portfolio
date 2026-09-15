@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 import { Links, generatePathWithRouteParams } from '@/settings/path';
+import { trackEvent } from '@/shared';
 import { Button } from '@/shared/ui/button';
 
 import { ProjectPreview } from './project-preview';
@@ -68,6 +69,11 @@ export const ProjectCard = ({
             target='_blank'
             rel='noopener noreferrer'
             className='w-full'
+            onClick={() =>
+              trackEvent('project_visit', {
+                project: projectKey,
+              })
+            }
           >
             <Button className='py-2 flex items-center justify-center gap-2 px-3 w-full'>
               {t('visitSite')}

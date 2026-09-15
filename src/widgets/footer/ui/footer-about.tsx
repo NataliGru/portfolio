@@ -17,7 +17,7 @@ export const FooterAbout = async () => {
       <p className='text-control-background'>{t('about.description')}</p>
 
       <div className='flex items-center gap-5'>
-        <DownloadCV className='w-fit' />
+        <DownloadCV className='w-fit' place='footer' />
 
         <Link href={Links.about}>
           <Button

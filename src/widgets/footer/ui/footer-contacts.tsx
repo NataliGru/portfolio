@@ -1,7 +1,6 @@
-import Image from 'next/image';
+'use client';
 
-import { DownloadCV } from '@/features';
-import { HoverUnderline, Link } from '@/shared';
+import { HoverUnderline, Link, trackEvent } from '@/shared';
 
 import { CONTACTS } from '../model/constants';
 
@@ -17,6 +16,9 @@ export const FooterContacts = () => {
             <Link
               href={isEmail ? `mailto:${contactData.link}` : contactData.link}
               target={isEmail ? undefined : '_blank'}
+              onClick={() =>
+                trackEvent(`${contactType as keyof typeof CONTACTS}_click`)
+              }
             >
               <HoverUnderline lineClassName='bg-control-background h-0.5 rounded-4xl'>
                 <span className='flex gap-1 items-center'>

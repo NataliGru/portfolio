@@ -33,7 +33,7 @@ export const DesktopNavigation = async () => {
       </ul>
 
       <div className='flex flex-row items-center gap-5'>
-        <DownloadCV />
+        <DownloadCV place='header' />
 
         <LocaleSwitcher />
 

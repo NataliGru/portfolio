@@ -97,7 +97,7 @@ export const MobileNavigation = () => {
             >
               <LocaleSwitcher />
 
-              <DownloadCV />
+              <DownloadCV place='mobile_header' />
             </motion.div>
           </motion.div>
         )}

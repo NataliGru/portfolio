@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer
       className={cn(
-        'bg-card-background/10 shadow-2xl border-t-2 border-t-card-background rounded-t-2xl',
+        'bg-card-background/10 shadow-1 border-t-2 border-t-card-background rounded-t-2xl',
         'flex flex-col gap-10 px-5 py-10 lg:px-10',
       )}
       id='footer'

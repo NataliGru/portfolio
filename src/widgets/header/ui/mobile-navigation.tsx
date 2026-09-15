@@ -36,7 +36,7 @@ export const MobileNavigation = () => {
   useMobileScrollLock({ isOpenMenu, closeMenu });
 
   return (
-    <nav className='relative z-50 md:hidden'>
+    <nav className='relative z-50 md:hidden max-w-full'>
       <div
         className={clsx(
           'relative z-50 flex h-20 items-center justify-between px-5',

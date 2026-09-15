@@ -8,7 +8,7 @@ const BUTTON_VARIANTS = {
   control:
     'rounded-xl p-2 flex item-center justify-center bg-section-background text-control-background hover:bg-card-background aria-pressed:bg-control-background aria-pressed:text-card-background',
   ghost:
-    'p-2 text-foreground/50 hover:text-foreground aria-pressed:text-foreground disabled:cursor-default',
+    'p-2 text-foreground/50 hover:text-foreground aria-pressed:text-foreground disabled:cursor-default ',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

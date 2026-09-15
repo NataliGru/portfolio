@@ -1,0 +1,36 @@
+{
+  "title": "About me",
+  "description": "A little about me, my background, and how I found my way into frontend development.",
+  "timeline": [
+    {
+      "number": "01",
+      "title": "Frontend development",
+      "period": "2023 — Present",
+      "paragraphs": [
+        "I'm a Frontend Developer with 2+ years of commercial experience, primarily working with React, Next.js and TypeScript.",
+        "I've worked on EdTech, e-commerce and AI-powered content products, building authentication and user flows, learning and study planning features, multi-step checkout and payments, admin tools, data-driven interfaces, localization, and SEO-focused content.",
+        "My work has involved taking features from requirements to implementation and refinement, working not only on how interfaces look, but also on how they behave, handle data, and fit into the product as a whole."
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Career switch",
+      "period": "2022 — 2023",
+      "paragraphs": [
+        "After several years in biology and laboratory work, I decided to take my career in a completely different direction and started learning web development.",
+        "I began with HTML, CSS and JavaScript, gradually moving to TypeScript and React. I completed a Full-Stack course at Mate Academy and continued learning through courses, practice and personal projects.",
+        "What started as learning something entirely new eventually became a career change, and in November 2023 I started working commercially as a Frontend Developer."
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Before tech",
+      "period": "2018 — 2022",
+      "paragraphs": [
+        "Before moving into tech, I studied biology at Ivan Franko National University of Lviv and worked in scientific research and laboratory diagnostics.",
+        "My research focused on Parkinson's disease and contributed to three scientific publications that I co-authored. I also presented my work at scientific conferences.",
+        "I later spent almost two years working as a Bacteriologist at Unilab. Alongside laboratory work, I was responsible for documentation and procedures, trained and supported new colleagues, contributed to ISO certification, and occasionally stepped in as acting department head."
+      ]
+    }
+  ]
+}

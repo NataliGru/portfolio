@@ -3,7 +3,7 @@
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 :root {
-/* Primitives */
+  /* Primitives */
   --grey-100: #ffffff;
   --grey-200: #f5f0f0;
   --grey-250: #ebe0e0;
@@ -13,15 +13,14 @@
   --grey-800: #1b1818;
   --grey-900: #000000;
 
-/* Semantic */
+  /* Semantic */
   --background: var(--grey-100);
   --foreground: var(--grey-800);
   --section-background: var(--grey-200);
   --card-background: var(--grey-250);
   --control-background: var(--grey-700);
-  --accent:var(--grey-700);
+  --accent: var(--grey-700);
   --secondary-text: var(--grey-300);
-  
 }
 
 @theme inline {
@@ -61,7 +60,9 @@ body {
 @theme {
   --breakpoint-xs: 340px;
   --breakpoint-3xl: 137.5rem;
-    /* 2200px */
+  /* 2200px */
+
+  --shadow-1: 0px -3px 8px -6px var(--color-foreground);
 }
 
 @utility transition-all-300 {

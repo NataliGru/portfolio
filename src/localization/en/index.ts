@@ -1,3 +1,4 @@
+import about from './about.json';
 import footer from './footer.json';
 import general from './general.json';
 import header from './header.json';
@@ -18,6 +19,7 @@ const messages = {
   footer,
   general,
   skills,
+  about,
 };
 
 export default messages;

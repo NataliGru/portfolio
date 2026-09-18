@@ -1,3 +1,3 @@
 export * from './change-locale';
-export * from './theme-toggle';
 export * from './download-cv';
+export * from './theme-toggle';

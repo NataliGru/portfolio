@@ -11,17 +11,17 @@ export const SkillsListItem = ({ skillItem }: SkillsListItemProps) => {
   const Icon = skillItem.icon;
 
   return (
-    <li className='flex flex-col gap-3 bg-background/80 rounded-2xl p-4'>
-      <h5 className='font-bold flex items-center gap-1 text-accent '>
+    <li className='bg-background/80 flex flex-col gap-3 rounded-2xl p-4'>
+      <h3 className='text-accent flex items-center gap-1 font-bold'>
         <Icon />
         {t(`groups.${skillItem.titleKey}`)}:
-      </h5>
+      </h3>
 
-      <div className='flex flex-row gap-2 flex-wrap'>
+      <div className='flex flex-row flex-wrap gap-2'>
         {skillItem.items.map((item) => (
           <span
             key={item}
-            className='px-2 py-0.5 rounded-2xl bg-card-background '
+            className='bg-card-background rounded-2xl px-2 py-0.5'
           >
             {item}
           </span>

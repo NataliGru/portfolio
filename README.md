@@ -1,4 +1,4 @@
-# Nataliia Hrushanyk — Portfolio
+# Nataliia Hrushanyk - Portfolio
 
 My personal developer portfolio, built to showcase my projects, skills, and
 professional experience.
@@ -54,7 +54,21 @@ npm run lint         # Check the project with ESLint
 npm run lint:fix     # Fix ESLint issues where possible
 npm run format       # Format files with Prettier
 npm run format:check # Check formatting
+npm run fix          # Fix ESLint issues and format the project
 ```
+
+## Development Workflow
+
+The repository includes workspace settings for VS Code. With the recommended
+ESLint and Prettier extensions installed, pressing `Ctrl+S`:
+
+- formats the current file with Prettier;
+- sorts imports with ESLint;
+- removes unused imports with ESLint.
+
+Prettier handles code formatting and Tailwind CSS class sorting, while ESLint
+is the single source of truth for import organization. Staged files are checked
+and fixed automatically before each commit with Husky and lint-staged.
 
 ## Project Structure
 

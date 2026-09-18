@@ -1,8 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-
+import { useTranslations } from 'next-intl';
 import { Download } from 'lucide-react';
 
 import { cn, trackEvent } from '@/shared';
@@ -20,13 +19,13 @@ export const DownloadCV = ({ className, place }: DownloadCVProp) => {
       href='/cv/Nataliia_Hrushanyk_CV_Front-End_Developer.pdf'
       download='Nataliia_Hrushanyk_CV_Front-End_Developer.pdf'
       className={cn(
-        'text-nowrap flex items-center justify-center gap-2 rounded-2xl bg-foreground/50 p-3 text-background transition-all-300 hover:bg-foreground',
+        'bg-foreground/50 text-background transition-all-300 hover:bg-foreground focus-ring flex items-center justify-center gap-2 rounded-2xl p-3 text-nowrap',
         className,
       )}
       onClick={() => trackEvent(`cv_download_${place}`)}
     >
       {t('downloadCV')}
-      <Download className='size-5 animate-bounce' />
+      <Download className='size-5 animate-bounce motion-reduce:animate-none' />
     </Link>
   );
 };

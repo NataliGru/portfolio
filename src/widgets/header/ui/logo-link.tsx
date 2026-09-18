@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-
 import clsx from 'clsx';
 
 import { Link } from '@/shared';
@@ -21,16 +20,15 @@ export const LogoLink = ({ onClick }: LogoLinkProps) => {
       onClick={onClick}
       className={clsx(
         'flex items-center px-4 py-3',
-
-        'rounded-xl bg-background hover:bg-card-background transition-all-300 ',
+        'bg-background hover:bg-card-background transition-all-300 focus-ring rounded-xl',
       )}
     >
-      <h2
+      <span
         aria-label='logo'
-        className='text-base font-bold 2xl:text-5xl uppercase text-center'
+        className='text-center text-base font-bold uppercase 2xl:text-5xl'
       >
         {t(NAVIGATION_LINKS.logo.textKey)}
-      </h2>
+      </span>
     </Link>
   );
 };

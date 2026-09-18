@@ -21,6 +21,8 @@
   --control-background: var(--grey-700);
   --accent: var(--grey-700);
   --secondary-text: var(--grey-300);
+
+  interpolate-size: allow-keywords;
 }
 
 @theme inline {
@@ -30,6 +32,7 @@
   --color-card-background: var(--card-background);
   --color-control-background: var(--control-background);
   --color-secondary-text: var(--secondary-text);
+  --color-accent: var(--accent);
 }
 
 [data-theme='light'] {
@@ -69,4 +72,12 @@ body {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0.01ms;
+  }
+}
+
+@utility focus-ring {
+  @apply focus-visible:ring-control-background focus-visible:ring-offset-background outline-none focus-visible:ring-5 focus-visible:ring-offset-2;
 }

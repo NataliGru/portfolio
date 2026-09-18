@@ -1,15 +1,15 @@
 import { SectionHeader } from '@/shared';
 
 import { ProjectGrid } from './project-grid';
-import { ProjectsHeader } from './projects-header';
 
 export const Projects = () => {
   return (
     <section
-      className='px-5 py-20 flex flex-col gap-10 items-center justify-center w-full'
       id='projects'
+      aria-labelledby='projects-title'
+      className='flex w-full flex-col items-center justify-center gap-10 px-5 py-20'
     >
-      <SectionHeader translationSection='projects' />
+      <SectionHeader translationSection='projects' headingId='projects-title' />
 
       <ProjectGrid />
     </section>

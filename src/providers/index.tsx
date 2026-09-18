@@ -1,39 +1,23 @@
-'use client';
-
-import { ReactNode, useEffect } from 'react';
-
-import {
-  AbstractIntlMessages,
-  NextIntlClientProvider,
-  Timezone,
-} from 'next-intl';
-
+import { ReactNode } from 'react';
+import { ThemeProvider } from 'next-themes';
 import ReactLenis from 'lenis/react';
+import { MotionConfig } from 'motion/react';
 
 type Props = {
   children: ReactNode;
-  locale: string;
-  messages: AbstractIntlMessages;
-  timeZone: Timezone;
 };
 
-export function ProvidersLayout({
-  children,
-  locale,
-  messages,
-  timeZone,
-}: Props) {
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
-
+export function ProvidersLayout({ children }: Props) {
   return (
-    <NextIntlClientProvider
-      locale={locale}
-      messages={messages}
-      timeZone={timeZone}
+    <ThemeProvider
+      attribute='data-theme'
+      defaultTheme='dark'
+      disableTransitionOnChange={false}
+      enableSystem={false}
     >
-      <ReactLenis root>{children}</ReactLenis>
-    </NextIntlClientProvider>
+      <MotionConfig reducedMotion='user'>
+        <ReactLenis root>{children}</ReactLenis>;
+      </MotionConfig>
+    </ThemeProvider>
   );
 }

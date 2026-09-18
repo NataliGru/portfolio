@@ -1,13 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-
+import { useTranslations } from 'next-intl';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
-import { Links, generatePathWithRouteParams } from '@/settings/path';
+import { generatePathWithRouteParams, Links } from '@/settings/path';
 import { trackEvent } from '@/shared';
-import { Button } from '@/shared/ui/button';
+import { buttonVariants } from '@/shared/constants';
 
 import { ProjectPreview } from './project-preview';
 
@@ -24,16 +23,17 @@ export const ProjectCard = ({
   projectURL,
   technologyKeys,
   slug,
-  categoryKeys,
+  // categoryKeys,
 }: ProjectCardProps) => {
   const t = useTranslations('projects');
+  const projectTitle = t(`items.${projectKey}.title`);
 
   return (
-    <article className='w-full min-w-0 overflow-hidden rounded-2xl border bg-background p-1 flex flex-col gap-1'>
-      <ProjectPreview projectURL={projectURL} />
+    <article className='bg-background flex w-full min-w-0 flex-col gap-1 overflow-hidden rounded-2xl border p-1'>
+      <ProjectPreview projectURL={projectURL} projectTitle={projectTitle} />
 
-      <div className='flex flex-col p-3 rounded-2xl bg-section-background gap-2'>
-        <h3 className='text-4xl font-bold'>{t(`items.${projectKey}.title`)}</h3>
+      <div className='bg-section-background flex flex-col gap-2 rounded-2xl p-3'>
+        <h3 className='text-4xl font-bold'>{projectTitle}</h3>
 
         <p className='text-control-background'>
           {t(`items.${projectKey}.description`)}
@@ -46,39 +46,42 @@ export const ProjectCard = ({
           {technologyKeys.map((techKey) => (
             <li
               key={techKey}
-              className='rounded-full bg-background/90 px-3 py-1 text-sm font-medium'
+              className='bg-background/90 rounded-full px-3 py-1 text-sm font-medium'
             >
               {t(`technologies.${techKey}`)}
             </li>
           ))}
         </ul>
 
-        <div className='flex items-center justify-between gap-3 mt-4 flex-wrap'>
+        <div className='mt-4 flex flex-wrap items-center justify-between gap-3'>
           <Link
             href={generatePathWithRouteParams(Links.projects.slug, { slug })}
-            className='w-full'
+            className={buttonVariants({
+              className:
+                'flex w-full items-center justify-center gap-2 px-3 py-2',
+            })}
           >
-            <Button className='py-2 flex items-center justify-center gap-2 px-3 w-full'>
-              {t('readMore')}
-              <ArrowUpRight className='text-background stroke-1 size-5' />
-            </Button>
+            {t('readMore')}
+
+            <ArrowUpRight className='text-background size-5 stroke-1' />
           </Link>
 
           <Link
             href={projectURL}
             target='_blank'
             rel='noopener noreferrer'
-            className='w-full'
+            className={buttonVariants({
+              className:
+                'flex w-full items-center justify-center gap-2 px-3 py-2',
+            })}
             onClick={() =>
               trackEvent('project_visit', {
                 project: projectKey,
               })
             }
           >
-            <Button className='py-2 flex items-center justify-center gap-2 px-3 w-full'>
-              {t('visitSite')}
-              <ExternalLink className='text-background stroke-1 size-5' />
-            </Button>
+            {t('visitSite')}
+            <ExternalLink className='text-background size-5 stroke-1' />
           </Link>
         </div>
       </div>

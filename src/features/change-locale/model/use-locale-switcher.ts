@@ -1,7 +1,6 @@
 import { useTransition } from 'react';
-
-import { Locale, useLocale, useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import { Locale, useLocale, useTranslations } from 'next-intl';
 
 import { usePathname, useRouter } from '@/shared';
 

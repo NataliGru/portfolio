@@ -9,12 +9,14 @@ interface AppShellProps {
 
 export const AppShell = ({ children }: AppShellProps) => {
   return (
-    <div className='bg-background text-foreground min-h-dvh flex flex-col justify-between h-full w-full'>
+    <div className='bg-background text-foreground flex h-full min-h-dvh w-full flex-col justify-between'>
       <Header />
 
-      <main className='relative z-0 flex-1 pt-20 '>{children}</main>
+      <div id='page-content' className='flex flex-1 flex-col'>
+        <main className='relative z-0 flex-1 pt-20'>{children}</main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };

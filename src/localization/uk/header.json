@@ -2,10 +2,10 @@
   "nameLogo": "Наталія Грушаник",
   "about": "Про мене",
   "projects": "Проєкти",
-  "skills": "Навички", 
+  "skills": "Навички",
   "experience": "Досвід",
   "contact": "Контакти",
   "closeMenu": "Закрити меню",
-  "openMenu": "Відкрити меню"
-  
+  "openMenu": "Відкрити меню",
+  "mobileNavigation": "Мобільне меню"
 }

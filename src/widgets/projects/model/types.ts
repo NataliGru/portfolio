@@ -1,1 +1,1 @@
-type PreviewMode = 'desktop' | 'mobile';
+export type PreviewMode = 'desktop' | 'mobile';

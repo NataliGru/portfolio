@@ -20,9 +20,11 @@
   },
   "visitSite": "Visit site",
   "readMore": "Read more",
-  "iframeLabel": "Project preview",
+  "iframeLabel": "Interactive preview of {project}",
   "preview": {
     "desktop": "Desktop preview",
-    "mobile": "Mobile preview"
+    "mobile": "Mobile preview",
+    "activate": "Activate preview",
+    "activationHint": "The interactive site loads only when you activate it."
   }
 }

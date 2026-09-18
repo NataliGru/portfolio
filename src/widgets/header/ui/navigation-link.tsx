@@ -16,7 +16,7 @@ export const NavigationLink = ({
       href={link}
       onClick={onClick}
       aria-label={label}
-      className='block py-3 md:px-3 md:py-5 lg:px-5'
+      className='focus-ring group block rounded-2xl py-3 md:px-3 md:py-5 lg:px-5'
     >
       <HoverUnderline lineClassName='bg-control-background'>
         {label}

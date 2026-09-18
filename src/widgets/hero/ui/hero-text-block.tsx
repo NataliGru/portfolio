@@ -4,12 +4,15 @@ export const HeroTextBlock = async () => {
   const t = await getTranslations('hero');
 
   return (
-    <div className='flex flex-col justify-center items-center gap-5 text-center flex-1 w-full z-10'>
-      <h2 className='uppercase text-2xl md:text-4xl text-secondary-text font-bold'>
+    <div className='z-10 flex w-full flex-1 flex-col items-center justify-center gap-5 text-center'>
+      <p className='text-secondary-text text-2xl font-bold uppercase md:text-4xl'>
         {t('eyebrow')}
-      </h2>
+      </p>
 
-      <h1 className='uppercase text-foreground text-4xl md:text-6xl font-bold leading-relaxed'>
+      <h1
+        className='text-foreground text-4xl leading-relaxed font-bold uppercase md:text-6xl'
+        id='hero-title'
+      >
         {t('title.start')}{' '}
         <span className='bg-background dark:bg-card-background rounded-4xl px-3 py-2'>
           {t('title.accent')}
@@ -18,7 +21,7 @@ export const HeroTextBlock = async () => {
         {t('title.end')}
       </h1>
 
-      <div className='text-lg md:text-2xl dark:text-secondary-text font-medium flex flex-col gap-6'>
+      <div className='dark:text-secondary-text flex flex-col gap-6 text-lg font-medium md:text-2xl'>
         <p>{t('description')}</p>
 
         <p className='text-base md:text-xl'>{t('techStack')}</p>

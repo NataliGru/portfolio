@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import nextVitals from 'eslint-config-next/core-web-vitals';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -41,6 +42,7 @@ const eslintConfig = [
     },
 
     plugins: {
+      'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
     },
 
@@ -49,19 +51,22 @@ const eslintConfig = [
       // because TypeScript handles it better
       'no-unused-vars': 'off',
 
-      // TypeScript-aware unused variables check
-      // Allows variables prefixed with "_" to be ignored
-      '@typescript-eslint/no-unused-vars': [
+      // Let eslint-plugin-unused-imports handle both unused imports and variables
+      // so imports are reported only once and can be removed automatically.
+      '@typescript-eslint/no-unused-vars': 'off',
+
+      'unused-imports/no-unused-vars': [
         'warn',
         {
           argsIgnorePattern: '^_',
+          args: 'after-used',
           varsIgnorePattern: '^_',
           caughtErrorsIgnorePattern: '^_',
         },
       ],
 
       // Automatically remove unused imports
-      'unused-imports/no-unused-imports': 'warn',
+      'unused-imports/no-unused-imports': 'error',
 
       // Sort imports into consistent groups
       'simple-import-sort/imports': [

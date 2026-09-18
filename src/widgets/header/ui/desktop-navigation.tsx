@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
-
 import clsx from 'clsx';
 
 import { DownloadCV, LocaleSwitcher } from '@/features';
 import { ThemeToggle } from '@/features/theme-toggle';
 
 import { NAVIGATION_LINKS } from '../model/constants';
+
 import { LogoLink } from './logo-link';
 import { NavigationLink } from './navigation-link';
 
@@ -23,7 +23,7 @@ export const DesktopNavigation = async () => {
 
       <ul className='flex flex-row items-center gap-5 text-lg font-medium 2xl:text-2xl'>
         {NAVIGATION_LINKS.items.map((navigationItem) => (
-          <li key={navigationItem.textKey} className='text-nowrap group'>
+          <li key={navigationItem.textKey} className='group text-nowrap'>
             <NavigationLink
               link={navigationItem.link}
               label={t(navigationItem.textKey)}

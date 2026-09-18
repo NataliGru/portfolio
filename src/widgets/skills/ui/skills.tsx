@@ -1,12 +1,14 @@
 import { SectionHeader } from '@/shared';
 
-import { SkillsHeader } from './skills-header';
 import { SkillsList } from './skills-list';
 
 export const Skills = () => {
   return (
-    <section className='bg-section-background w-full rounded-2xl px-5 py-20 flex flex-col gap-5'>
-      <SectionHeader translationSection='skills' />
+    <section
+      className='bg-section-background flex w-full flex-col gap-5 rounded-2xl px-5 py-20'
+      aria-labelledby='skills-title'
+    >
+      <SectionHeader translationSection='skills' headingId='skills-title' />
 
       <SkillsList />
     </section>

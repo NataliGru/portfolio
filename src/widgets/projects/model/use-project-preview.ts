@@ -1,11 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { PREVIEW_CONFIG, PREVIEW_HEIGHT } from './constants';
+import { PreviewMode } from './types';
 
 export const useProjectPreview = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [currentMode, setCurrentMode] = useState<PreviewMode>('desktop');
+  const [isActive, setIsActive] = useState(false);
 
   const [scale, setScale] = useState(1);
 
@@ -13,11 +15,14 @@ export const useProjectPreview = () => {
 
   const iframeHeight = PREVIEW_HEIGHT / scale;
 
-  const updateScale = (containerWidth: number) => {
-    if (containerWidth <= 0) return;
+  const updateScale = useCallback(
+    (containerWidth: number) => {
+      if (containerWidth <= 0) return;
 
-    setScale(containerWidth / width);
-  };
+      setScale(containerWidth / width);
+    },
+    [width],
+  );
 
   useEffect(() => {
     const container = containerRef.current;
@@ -33,7 +38,7 @@ export const useProjectPreview = () => {
     observer.observe(container);
 
     return () => observer.disconnect();
-  }, [width]);
+  }, [width, updateScale]);
 
   return {
     containerRef,
@@ -42,5 +47,7 @@ export const useProjectPreview = () => {
     iframeHeight,
     currentMode,
     setCurrentMode,
+    isActive,
+    activatePreview: () => setIsActive(true),
   };
 };

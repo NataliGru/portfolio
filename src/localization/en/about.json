@@ -5,7 +5,7 @@
     {
       "number": "01",
       "title": "Frontend development",
-      "period": "2023 — Present",
+      "period": "2023 - Present",
       "paragraphs": [
         "I'm a Frontend Developer with 2+ years of commercial experience, primarily working with React, Next.js and TypeScript.",
         "I've worked on EdTech, e-commerce and AI-powered content products, building authentication and user flows, learning and study planning features, multi-step checkout and payments, admin tools, data-driven interfaces, localization, and SEO-focused content.",
@@ -15,7 +15,7 @@
     {
       "number": "02",
       "title": "Career switch",
-      "period": "2022 — 2023",
+      "period": "2022 - 2023",
       "paragraphs": [
         "After several years in biology and laboratory work, I decided to take my career in a completely different direction and started learning web development.",
         "I began with HTML, CSS and JavaScript, gradually moving to TypeScript and React. I completed a Full-Stack course at Mate Academy and continued learning through courses, practice and personal projects.",
@@ -25,12 +25,127 @@
     {
       "number": "03",
       "title": "Before tech",
-      "period": "2018 — 2022",
+      "period": "2018 - 2022",
       "paragraphs": [
         "Before moving into tech, I studied biology at Ivan Franko National University of Lviv and worked in scientific research and laboratory diagnostics.",
         "My research focused on Parkinson's disease and contributed to three scientific publications that I co-authored. I also presented my work at scientific conferences.",
         "I later spent almost two years working as a Bacteriologist at Unilab. Alongside laboratory work, I was responsible for documentation and procedures, trained and supported new colleagues, contributed to ISO certification, and occasionally stepped in as acting department head."
       ]
     }
-  ]
+  ],
+  "experienceAndEducation": {
+    "title": "Experience and education",
+    "description": "An overview of my professional experience and education."
+  },
+  "experience": {
+    "title": "Experience",
+    "techStack": "Tech stack",
+    "showDetails": "Show details about {company}",
+    "hideDetails": "Hide details about {company}",
+    "skillsAndTechnologies": "Skills & technologies",
+    "items": [
+      {
+        "period": "Nov 2023 - Dec 2025",
+        "company": "VRB Tech",
+        "position": "Frontend Developer",
+        "projects": [
+          {
+            "title": "Learning Platform",
+            "description": "Platform that generates structured learning content (questions, flashcards, quizzes) from user materials and supports exam preparation.",
+            "details": [
+              "Built authentication system (email/password, Google sign-in, email verification) with token lifecycle (session, refresh, fallback login) ensuring stable user sessions and preventing unexpected logouts during token expiration.",
+              "Developed quiz and learning flows with mode-based logic, validation, and progress tracking across different learning scenarios.",
+              "Built calendar-based study planning with dynamic state, scheduling rules, and progress tracking across multiple learning scenarios.",
+              "Implemented hierarchical content rendering for large datasets (text, formulas, structured nodes) with infinite scroll and dynamic grouping into readable pages.",
+              "Developed gated learning programs with separate access logic and navigation inside the main application.",
+              "Integrated payments (Stripe, PayPal) and enforced subscription-based access across features.",
+              "Participated in product discussions and feature refinement, contributing to implementation decisions."
+            ],
+            "techStack": "React · TypeScript · RTK Query · Zustand · React Hook Form · Tailwind CSS · i18n · Chart.js"
+          },
+          {
+            "title": "Order Management & Delivery Platform",
+            "description": "E-commerce platform with ordering flows, payments, and admin dashboard.",
+            "details": [
+              "Transformed a basic landing page into a structured product with multi-step ordering flow, user account, and admin panel.",
+              "Built step-based ordering flow with validation, pricing logic, and stock handling.",
+              "Developed admin tools for managing orders, including filtering, bulk actions, editing, and data export for operational workflows.",
+              "Integrated payments and handled edge cases in availability, pricing, and delivery logic."
+            ],
+            "techStack": "Next.js · Firebase · React Hook Form · MUI · next-intl"
+          },
+          {
+            "title": "AI-powered Content Platform",
+            "description": "Platform for generating and displaying AI-based content (text, images, media).",
+            "details": [
+              "Restructured content into modular blocks (analysis, summaries, linked elements), improving readability and navigation.",
+              "Implemented SEO optimization (meta tags, Open Graph, structured data).",
+              "Built dynamic article system with Markdown parsing and custom rendering logic for flexible content structures.",
+              "Added filtering and internal linking for content discovery, improving navigation across large content sets."
+            ],
+            "techStack": "Next.js · Firebase · Chakra UI · i18n · Localise"
+          }
+        ]
+      },
+      {
+        "period": "Jul 2020 - Jun 2022",
+        "company": "Unilab",
+        "position": "Bacteriologist",
+        "details": [
+          "Conducted extensive laboratory research, ensuring the accuracy and validation of results.",
+          "Managed inventory, maintained meticulous documentation, and supervised equipment upkeep.",
+          "Played a pivotal role in onboarding, training, and providing support to 4 new colleagues.",
+          "Developed Standard Operating Procedures (SOPs) and made significant contributions to achieving ISO certification.",
+          "Stepped up as acting department head during their absence, showcasing leadership capabilities."
+        ]
+      },
+      {
+        "period": "Jun 2019 - Jan 2021",
+        "company": "Ivan Franko National University of Lviv",
+        "position": "Laboratory Assistant",
+        "details": [
+          "Actively contributed to ongoing department research projects, enhancing scientific progress.",
+          "Investigated the effects of oxidative stress on cell activity.",
+          "Analyzed critical cell viability indicators, supporting research objectives.",
+          "Published scientific abstracts and articles, contributing to the academic discourse.",
+          "Presented research findings at conferences, sharing knowledge with the scientific community."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "institution": "Ivan Franko National University of Lviv",
+        "degree": "Bachelor's degree",
+        "program": "Biology",
+        "period": "Sep 2014 - Jun 2018"
+      },
+      {
+        "institution": "Ivan Franko National University of Lviv",
+        "degree": "Master's degree",
+        "program": "Biology",
+        "period": "Sep 2018 - Dec 2019"
+      }
+    ]
+  },
+  "courses": {
+    "title": "Courses",
+    "items": [
+      {
+        "institution": "Mate Academy",
+        "program": "Full-Stack Development",
+        "details": [
+          "Git",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Web Development"
+        ]
+      }
+    ]
+  }
 }

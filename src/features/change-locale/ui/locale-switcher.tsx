@@ -24,6 +24,7 @@ export const LocaleSwitcher = () => {
               aria-label={`${t(`locale.label`)} ${t(`locale.${localeItem}`)}`}
               onClick={() => onChangeLocale(localeItem)}
               disabled={isActive || isPending}
+              className='focus-ring rounded-2xl'
             >
               {t(`locale.${localeItem}Short`)}
             </Button>

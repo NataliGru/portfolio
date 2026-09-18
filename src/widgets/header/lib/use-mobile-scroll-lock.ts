@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
+import { useEffect } from 'react';
 import { useLenis } from 'lenis/react';
 
 interface UseMobileScrollLock {
@@ -42,4 +41,17 @@ export const useMobileScrollLock = ({
       desktopMediaQuery.removeEventListener('change', closeMenuOnDesktop);
     };
   }, [closeMenu]);
+
+  useEffect(() => {
+    if (!isOpenMenu) return;
+
+    const previousOverflow = document.documentElement.style.overflow;
+
+    // Lenis controls smooth scroll, but this also blocks native browser scroll.
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.documentElement.style.overflow = previousOverflow;
+    };
+  }, [isOpenMenu]);
 };

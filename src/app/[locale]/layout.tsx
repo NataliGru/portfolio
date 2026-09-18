@@ -1,6 +1,6 @@
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTimeZone, setRequestLocale } from 'next-intl/server';
 
-import { ProvidersLayout } from '@/providers';
 import { routing } from '@/shared';
 
 import { getValidLocale } from './_lib/get-valid-locale';
@@ -35,8 +35,12 @@ export default async function LocaleLayout({
   const timeZone = await getTimeZone();
 
   return (
-    <ProvidersLayout locale={locale} messages={messages} timeZone={timeZone}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages}
+      timeZone={timeZone}
+    >
       <AppShell>{children}</AppShell>
-    </ProvidersLayout>
+    </NextIntlClientProvider>
   );
 }

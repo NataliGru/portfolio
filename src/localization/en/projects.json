@@ -4,7 +4,61 @@
   "items": {
     "mntn": {
       "title": "MNTN",
-      "description": "A responsive hiking-themed landing page built around scroll-driven storytelling, layered parallax and smooth motion. The project explores how animation and layout can work together without getting in the way of the content."
+      "description": "A responsive hiking-themed landing page built around scroll-driven storytelling, layered parallax and smooth motion. The project explores how animation and layout can work together without getting in the way of the content.",
+      "siteUrl": "https://studio-landing-tawny.vercel.app/",
+      "sourceUrl": "https://github.com/NataliGru/studio-landing",
+      "overview": {
+        "title": "Overview",
+        "paragraphs": [
+          "MNTN is a portfolio landing page focused on motion, layered composition and scroll-based interaction.",
+          "The project explores how parallax, animated content sections and smooth scrolling can work together while keeping the content readable and the experience responsive across different screen sizes."
+        ]
+      },
+
+      "challenge": {
+        "title": "The challenge",
+        "paragraphs": [
+          "The main challenge was coordinating multiple scroll-driven effects while keeping the layout responsive and the interaction smooth.",
+          "The hero is composed of several visual layers that move at different speeds, while content sections animate independently as they enter the viewport. This required careful control of positioning, animation timing and responsive behavior."
+        ]
+      },
+
+      "features": {
+        "title": "Key features",
+        "items": [
+          "Layered scroll-driven hero parallax",
+          "Animated content sections",
+          "Smooth scrolling and scroll-to-top navigation",
+          "Responsive desktop and mobile navigation",
+          "Dark and light themes",
+          "English and Ukrainian localization",
+          "Optimized responsive images",
+          "Accessible interactive controls"
+        ]
+      },
+
+      "implementation": {
+        "title": "Implementation",
+        "paragraphs": [
+          "Scroll-based animations are implemented with Motion, while Lenis is used to provide smooth scrolling throughout the page.",
+          "The application uses the Next.js App Router with localized routes powered by next-intl and theme switching handled with next-themes.",
+          "The codebase follows a feature-oriented architecture that separates page composition, larger UI sections, user interactions and reusable shared components."
+        ]
+      },
+
+      "technologies": {
+        "title": "Technologies",
+        "items": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Motion",
+          "Lenis",
+          "next-intl",
+          "next-themes"
+        ]
+      }
     }
   },
   "category": {
@@ -19,8 +73,10 @@
     "motion": "Motion"
   },
   "visitSite": "Visit site",
+  "viewSource": "View source",
   "readMore": "Read more",
   "iframeLabel": "Interactive preview of {project}",
+  "back": "Back",
   "preview": {
     "desktop": "Desktop preview",
     "mobile": "Mobile preview",

@@ -1,7 +1,5 @@
-export default function Contact() {
-  return (
-    <div className='flex w-full flex-row items-center justify-between gap-4 p-4'>
-      Contact
-    </div>
-  );
+import { Contact } from '@/widgets';
+
+export default function ContactPage() {
+  return <Contact />;
 }

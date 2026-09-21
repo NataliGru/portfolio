@@ -1,0 +1,60 @@
+{
+  "title": "Contact",
+  "description": "Have an opportunity, a project, or just want to get in touch? Feel free to send me a message.",
+
+  "contact": {
+    "title": "Let's talk",
+    "description": "I'm open to new opportunities, collaborations and interesting projects.",
+
+    "email": {
+      "label": "Email"
+    },
+
+    "socials": {
+      "title": "Find me online",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  },
+
+  "form": {
+    "title": "Send me a message",
+
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me a little about what you'd like to discuss..."
+      }
+    },
+
+    "submit": "Send message",
+    "submitting": "Sending...",
+
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please enter your message."
+    },
+
+    "success": {
+      "title": "Message sent",
+      "description": "Thanks for reaching out! I'll get back to you as soon as I can.",
+      "action": "Send another message"
+    },
+
+    "error": {
+      "title": "Something went wrong",
+      "description": "Your message couldn't be sent. Please try again or contact me directly by email.",
+      "action": "Try again"
+    }
+  }
+}

@@ -1,7 +1,11 @@
-export default function ProjectId() {
-  return (
-    <div className='flex w-full flex-row items-center justify-between gap-4 p-4'>
-      ProjectId
-    </div>
-  );
+import { Project } from '@/widgets';
+
+export default async function ProjectId({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  return <Project slug={slug} />;
 }

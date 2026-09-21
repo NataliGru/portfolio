@@ -16,7 +16,7 @@ export function ProvidersLayout({ children }: Props) {
       enableSystem={false}
     >
       <MotionConfig reducedMotion='user'>
-        <ReactLenis root>{children}</ReactLenis>;
+        <ReactLenis root>{children}</ReactLenis>
       </MotionConfig>
     </ThemeProvider>
   );

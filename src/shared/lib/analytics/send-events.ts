@@ -5,6 +5,7 @@ type AnalyticsEvent =
   | 'cv_download_mobile_header'
   | 'cv_download_footer'
   | 'project_visit'
+  | 'project_code_visit'
   | 'contact_click'
   | 'email_click'
   | 'linkedin_click'

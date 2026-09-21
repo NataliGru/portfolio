@@ -4,11 +4,10 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
+import { ProjectPreview, ProjectShortDescriptionBlock } from '@/entities';
 import { generatePathWithRouteParams, Links } from '@/settings/path';
 import { trackEvent } from '@/shared';
 import { buttonVariants } from '@/shared/constants';
-
-import { ProjectPreview } from './project-preview';
 
 interface ProjectCardProps {
   projectKey: string;
@@ -33,25 +32,14 @@ export const ProjectCard = ({
       <ProjectPreview projectURL={projectURL} projectTitle={projectTitle} />
 
       <div className='bg-section-background flex flex-col gap-2 rounded-2xl p-3'>
-        <h3 className='text-4xl font-bold'>{projectTitle}</h3>
-
-        <p className='text-control-background'>
-          {t(`items.${projectKey}.description`)}
-        </p>
-
-        <ul
-          className='flex flex-wrap gap-2'
-          aria-label={t('technologies.technologies')}
-        >
-          {technologyKeys.map((techKey) => (
-            <li
-              key={techKey}
-              className='bg-background/90 rounded-full px-3 py-1 text-sm font-medium'
-            >
-              {t(`technologies.${techKey}`)}
-            </li>
-          ))}
-        </ul>
+        <ProjectShortDescriptionBlock
+          title={projectTitle}
+          description={t(`items.${projectKey}.description`)}
+          technologyList={technologyKeys.map((techKey) =>
+            t(`technologies.${techKey}`),
+          )}
+          listAriaLabel={t('technologies.technologies')}
+        />
 
         <div className='mt-4 flex flex-wrap items-center justify-between gap-3'>
           <Link

@@ -1,4 +1,5 @@
 import about from './about.json';
+import contacts from './contacts.json';
 import footer from './footer.json';
 import general from './general.json';
 import header from './header.json';
@@ -20,6 +21,7 @@ const messages = {
   general,
   skills,
   about,
+  contacts,
 };
 
 export default messages;

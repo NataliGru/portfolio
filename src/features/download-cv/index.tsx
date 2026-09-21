@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Download } from 'lucide-react';
 
@@ -15,7 +14,7 @@ export const DownloadCV = ({ className, place }: DownloadCVProp) => {
   const t = useTranslations('general');
 
   return (
-    <Link
+    <a
       href='/cv/Nataliia_Hrushanyk_CV_Front-End_Developer.pdf'
       download='Nataliia_Hrushanyk_CV_Front-End_Developer.pdf'
       className={cn(
@@ -26,6 +25,6 @@ export const DownloadCV = ({ className, place }: DownloadCVProp) => {
     >
       {t('downloadCV')}
       <Download className='size-5 animate-bounce motion-reduce:animate-none' />
-    </Link>
+    </a>
   );
 };

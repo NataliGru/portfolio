@@ -40,9 +40,15 @@
 
     "validation": {
       "nameRequired": "Вкажіть ваше ім’я.",
+      "nameTooShort": "Ім’я має містити щонайменше 2 символи.",
+      "nameTooLong": "Ім’я не може містити більше 50 символів.",
+
       "emailRequired": "Вкажіть вашу email-адресу.",
       "emailInvalid": "Вкажіть коректну email-адресу.",
-      "messageRequired": "Напишіть повідомлення."
+
+      "messageRequired": "Напишіть повідомлення.",
+      "messageTooShort": "Повідомлення має містити щонайменше 10 символів.",
+      "messageTooLong": "Повідомлення не може містити більше 1000 символів."
     },
 
     "success": {

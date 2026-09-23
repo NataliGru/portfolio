@@ -40,9 +40,13 @@
 
     "validation": {
       "nameRequired": "Please enter your name.",
+      "nameTooShort": "Name must contain at least 2 characters.",
+      "nameTooLong": "Name must contain no more than 50 characters.",
       "emailRequired": "Please enter your email address.",
       "emailInvalid": "Please enter a valid email address.",
-      "messageRequired": "Please enter your message."
+      "messageRequired": "Please enter your message.",
+      "messageTooShort": "Message must contain at least 10 characters.",
+      "messageTooLong": "Message must contain no more than 1000 characters."
     },
 
     "success": {

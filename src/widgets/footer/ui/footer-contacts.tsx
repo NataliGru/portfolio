@@ -1,8 +1,7 @@
 'use client';
 
 import { HoverUnderline, Link, trackEvent } from '@/shared';
-
-import { CONTACTS } from '../model/constants';
+import { CONTACTS } from '@/shared/constants';
 
 export const FooterContacts = () => {
   return (

@@ -2,6 +2,9 @@
 import { useTranslations } from 'next-intl';
 import { ArrowDown } from 'lucide-react';
 
+import { Links } from '@/settings';
+import { Link } from '@/shared';
+import { buttonVariants } from '@/shared/constants';
 import { Button } from '@/shared/ui/button';
 
 export const HeroCTA = () => {
@@ -21,7 +24,15 @@ export const HeroCTA = () => {
         <ArrowDown className='size-4 animate-bounce motion-reduce:animate-none' />
       </Button>
 
-      <Button className='p-3'>{t('contact')}!</Button>
+      <Link
+        href={Links.contact}
+        className={buttonVariants({
+          variant: 'primary',
+          className: 'p-3',
+        })}
+      >
+        {t('contact')}!
+      </Link>
     </div>
   );
 };

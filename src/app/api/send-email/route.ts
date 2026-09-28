@@ -78,10 +78,7 @@ export async function POST(request: Request) {
     });
 
     if (!turnstileResponse.ok) {
-      console.error(
-        'Turnstile request failed:',
-        turnstileResponse.status,
-      );
+      console.error('Turnstile request failed:', turnstileResponse.status);
 
       return Response.json(
         { error: 'Security verification failed' },
@@ -142,9 +139,6 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Send email error:', error);
 
-    return Response.json(
-      { error: 'Unexpected server error' },
-      { status: 500 },
-    );
+    return Response.json({ error: 'Unexpected server error' }, { status: 500 });
   }
 }

@@ -107,7 +107,7 @@ export const ContactForm = () => {
 
   return (
     <form
-      className='flex w-full min-w-0 flex-1 flex-col gap-6'
+      className='flex w-full flex-1 flex-col gap-6'
       onSubmit={handleSubmit(onSubmit, onInvalid)}
       noValidate
     >

@@ -33,10 +33,12 @@
       ]
     }
   ],
+  "experienceAndEducation": {
+    "title": "Досвід та освіта",
+    "description": "Огляд мого професійного досвіду та освіти."
+  },
   "experience": {
-    "generalTitle": "Досвід та освіта",
     "title": "Досвід",
-    "description": "Огляд мого професійного досвіду та освіти.",
     "showDetails": "Показати деталі про {company}",
     "hideDetails": "Сховати деталі про {company}",
     "items": [

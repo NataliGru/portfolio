@@ -88,11 +88,11 @@ export const ContactForm = () => {
 
   return (
     <form
-      className='flex flex-1 flex-col gap-4'
+      className='flex flex-1 flex-col gap-6'
       onSubmit={handleSubmit(onSubmit, onInvalid)}
       noValidate
     >
-      <h3>{t('form.title')}</h3>
+      {/* <h3>{t('form.title')}</h3> */}
 
       {(Object.keys(defaultValues) as Array<keyof ContactFormData>).map(
         (contactFormField) => (

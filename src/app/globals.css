@@ -81,3 +81,7 @@ body {
 @utility focus-ring {
   @apply focus-visible:ring-control-background focus-visible:ring-offset-background outline-none focus-visible:ring-5 focus-visible:ring-offset-2;
 }
+
+@utility focus-error-ring {
+  @apply focus-visible:ring-offset-background outline-none focus-visible:ring-5 focus-visible:ring-red-300 focus-visible:ring-offset-2;
+}

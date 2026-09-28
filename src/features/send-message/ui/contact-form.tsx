@@ -13,7 +13,9 @@ import {
   contactFormSchema,
 } from '../model/contact-form-schema';
 
+import { ContactFormError } from './contact-form-error';
 import { ContactFormField } from './contact-form-field';
+import { ContactFormSuccess } from './contact-form-success';
 
 const Turnstile = dynamic(
   () => import('@marsidev/react-turnstile').then((module) => module.Turnstile),
@@ -28,11 +30,15 @@ const defaultValues: ContactFormData = {
   message: '',
 };
 
+type SubmitStatus = 'idle' | 'success' | 'error';
+
 export const ContactForm = () => {
   const t = useTranslations('contacts');
 
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [turnstileResetKey, setTurnstileResetKey] = useState(0);
+
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
 
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -47,8 +53,11 @@ export const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setSubmitStatus('idle');
+
     if (!turnstileToken) {
       console.error('Complete the security check');
+      setSubmitStatus('error');
       return;
     }
 
@@ -68,13 +77,15 @@ export const ContactForm = () => {
 
       if (!response.ok) {
         console.error(result);
+        setSubmitStatus('error');
         return;
       }
 
       reset();
-      console.log('Message sent:', result);
+      setSubmitStatus('success');
     } catch (error) {
       console.error('Request failed:', error);
+      setSubmitStatus('error');
     } finally {
       // Токен одноразовий, тому після кожної спроби його треба оновити
       setTurnstileToken(null);
@@ -86,9 +97,17 @@ export const ContactForm = () => {
     console.log(errors, 'validation errors');
   };
 
+  const onResetFormAndStatus = () => {
+    reset();
+    setSubmitStatus('idle');
+  };
+
+  if (submitStatus === 'success')
+    return <ContactFormSuccess onSendAnotherMessage={onResetFormAndStatus} />;
+
   return (
     <form
-      className='flex flex-1 flex-col gap-6'
+      className='flex w-full min-w-0 flex-1 flex-col gap-6'
       onSubmit={handleSubmit(onSubmit, onInvalid)}
       noValidate
     >
@@ -110,6 +129,8 @@ export const ContactForm = () => {
           />
         ),
       )}
+
+      {submitStatus === 'error' && <ContactFormError />}
 
       {siteKey && (
         <Turnstile

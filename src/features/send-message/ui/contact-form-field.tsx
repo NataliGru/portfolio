@@ -39,8 +39,10 @@ export const ContactFormField = ({
     ...register(fieldName),
   };
 
-  const commonClassName =
-    'border-control-background focus-ring rounded-lg border px-3 py-2 text-sm';
+  const commonClassName = cn(
+    'border-control-background  rounded-lg border px-3 py-2 text-sm',
+    hasError ? 'focus-error-ring' : 'focus-ring',
+  );
 
   const fieldType = getFieldType(fieldName);
 

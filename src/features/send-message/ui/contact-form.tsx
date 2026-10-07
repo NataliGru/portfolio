@@ -118,7 +118,7 @@ export const ContactForm = () => {
           <ContactFormField
             key={contactFormField}
             label={t(`form.fields.${contactFormField}.label`)}
-            placeholder={t('form.fields.name.placeholder')}
+            placeholder={t(`form.fields.${contactFormField}.placeholder`)}
             hasError={Boolean(errors[contactFormField])}
             fieldName={contactFormField}
             errorMessage={

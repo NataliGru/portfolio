@@ -8,6 +8,13 @@ export const PROJECTS_LIST = [
     technologyKeys: ['next', 'typescript', 'tailwind', 'motion'],
     categoryKeys: ['landing', 'frontend'],
   },
+  {
+    projectKey: 'coffee',
+    slug: 'coffee',
+    siteUrl: 'https://coffee-landing-natali-gru.vercel.app/',
+    technologyKeys: ['typescript', 'HTML5', 'CSS3'],
+    categoryKeys: ['landing', 'frontend'],
+  },
 ];
 
 export const PREVIEW_CONFIG = {

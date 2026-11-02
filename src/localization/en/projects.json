@@ -59,7 +59,63 @@
           "next-themes"
         ]
       }
-    }
+    },
+  "coffee": {
+  "title": "Bean Scene",
+  "description": "A responsive coffee shop landing page with an interactive menu, drink customization, and a shopping cart. In this project, I focused on creating an intuitive ordering flow, from choosing drink sizes and quantities to editing the cart and confirming an order.",
+  "siteUrl": "https://coffee-landing-natali-gru.vercel.app/",
+  "sourceUrl": "https://github.com/NataliGru/coffee-landing",
+  "overview": {
+    "title": "Overview",
+    "paragraphs": [
+      "Bean Scene is a fictional coffee shop landing page that combines brand presentation, a drinks menu, and a client-side ordering flow.",
+      "In this project, I explored how to extend a promotional page with interactive features while maintaining clear navigation, responsive layouts, and an accessible interface."
+    ]
+  },
+  "challenge": {
+    "title": "Challenge",
+    "paragraphs": [
+      "The main challenge was keeping cart state, drink customization, and price calculations in sync so that every user action was consistently reflected in the interface.",
+      "This required handling identical drinks of the same size, quantity limits, and the empty-cart state. Dialogs, notifications, and keyboard interactions also needed careful attention to accessibility."
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "items": [
+      "Drink size and quantity selection in a dialog",
+      "Dynamic drink pricing and order-total calculation",
+      "Shopping cart with quantity controls and item removal",
+      "Automatic merging of identical drinks of the same size",
+      "Order confirmation that clears the cart",
+      "Notifications with an action to open the cart",
+      "Responsive desktop and mobile navigation",
+      "Feedback carousel and scroll-triggered section animations",
+      "Keyboard accessibility and reduced-motion support",
+      "Optimized WebP images with lazy loading"
+    ]
+  },
+  "implementation": {
+    "title": "Implementation",
+    "paragraphs": [
+      "The project is built with semantic HTML, CSS, and TypeScript using Vite. The main content and menu are available in the HTML, while interactive flows are implemented in separate TypeScript modules.",
+      "Cart state management is separated from rendering and event handling. The drinks catalog and base prices are centralized, while pricing calculations and quantity limits are handled in a dedicated module.",
+      "Dialogs use the native HTML dialog element, section reveal animations use IntersectionObserver, and feedback transitions use the Web Animations API. Dynamic updates include screen reader announcements, and animations respect the prefers-reduced-motion setting."
+    ]
+  },
+  "technologies": {
+    "title": "Technologies",
+    "items": [
+      "HTML5",
+      "CSS3",
+      "TypeScript",
+      "Vite",
+      "Intersection Observer API",
+      "Web Animations API",
+      "ESLint",
+      "Prettier"
+    ]
+  }
+}
   },
   "category": {
     "landing": "Landing page",
